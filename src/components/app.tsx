@@ -1,4 +1,5 @@
 import React from 'react';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import {
   Box,
   Container,
@@ -9,14 +10,21 @@ import {
   Card,
   CardContent,
   Chip,
-  Divider
+  Divider,
+  AppBar,
+  Toolbar,
+  IconButton
 } from '@mui/material';
 import {
   Rocket,
   Code,
   Speed,
-  Security
+  Security,
+  Home as HomeIcon,
+  Psychology
 } from '@mui/icons-material';
+import { NmaiLanding } from './NmaiLanding';
+import { TransactionDetails } from './TransactionDetails';
 
 export const Home = () => {
   return (
@@ -148,19 +156,36 @@ export const Home = () => {
               • Run <code style={{ background: 'rgba(0,0,0,0.2)', padding: '2px 6px', borderRadius: '4px' }}>npm run start:local</code> for development
             </Typography>
             <Typography variant="body1" sx={{ mb: 2, color: 'rgba(255, 255, 255, 0.9)' }}>
-              • Check out Material-UI components for beautiful UI
+              • Check out the new NmAi feature for transaction analysis
             </Typography>
           </Box>
           
           <Button
             variant="contained"
             size="large"
+            href="/nmai"
             sx={{
               mt: 2,
+              mr: 2,
               background: 'linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)',
               boxShadow: '0 3px 5px 2px rgba(255, 105, 135, .3)',
               '&:hover': {
                 background: 'linear-gradient(45deg, #FE6B8B 60%, #FF8E53 100%)',
+              }
+            }}
+          >
+            Try NmAi
+          </Button>
+          <Button
+            variant="outlined"
+            size="large"
+            sx={{
+              mt: 2,
+              color: 'white',
+              borderColor: 'rgba(255,255,255,0.5)',
+              '&:hover': {
+                borderColor: 'white',
+                backgroundColor: 'rgba(255,255,255,0.1)'
               }
             }}
             onClick={() => window.open('https://mui.com/', '_blank')}
@@ -177,5 +202,39 @@ export const Home = () => {
         </Box>
       </Box>
     </Container>
+  );
+};
+
+const Navbar = () => {
+  return (
+    <AppBar position="static" sx={{ background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)' }}>
+      <Toolbar>
+        <IconButton edge="start" color="inherit" href="/">
+          <HomeIcon />
+        </IconButton>
+        <Typography variant="h6" component="div" sx={{ flexGrow: 1, ml: 1 }}>
+          Cockpit DS UI
+        </Typography>
+        <Button color="inherit" href="/nmai" startIcon={<Psychology />}>
+          NmAi
+        </Button>
+      </Toolbar>
+    </AppBar>
+  );
+};
+
+export const App = () => {
+  return (
+    <Router>
+      <Box sx={{ minHeight: '100vh', backgroundColor: '#f5f5f5' }}>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/nmai" element={<NmaiLanding />} />
+          <Route path="/nmai/transaction/:transactionId" element={<TransactionDetails />} />
+          <Route path="*" element={<Navigate to="/" replace />} />
+        </Routes>
+      </Box>
+    </Router>
   );
 };
