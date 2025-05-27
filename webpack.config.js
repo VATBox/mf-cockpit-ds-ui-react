@@ -4,7 +4,7 @@ const singleSpaDefaults = require("webpack-config-single-spa-react-ts");
 module.exports = (webpackConfigEnv, argv) => {
   const defaultConfig = singleSpaDefaults({
     orgName: "bluedot",
-    projectName: "mf-template-react",
+    projectName: "mf-cockpit-ds-ui-react",
     webpackConfigEnv,
     argv,
   });

@@ -7,7 +7,7 @@
     "target": "esnext",
     "module": "commonjs"
   },
-  "files": ["src/bluedot-mf-template-react.tsx"],
+  "files": ["src/bluedot-mf-cockpit-ds-ui-react.tsx"],
   "include": ["src", "server"],
   "exclude": ["build", "jest", "node_modules", "scripts", "webpack", "types", "dist"]
 }

@@ -1,10 +1,10 @@
-# mf-template-react
+# mf-cockpit-ds-ui-react
 
 Template to create react mFe. Read the instruction below and use this as a template to create new react mFe.
 
 1. The name of the new repository should start with prefix "mf-cockpit-" by convention
-2. Change the name with the new repository ( mf-template-react => name of new repository ) in the following files: - package-lock.json - tsconfig.json - webpack.config.js
-   Also change the filename itself bluedot-mf-template-react.tsx => bluedot-name of the repostiroy.tsx ( for example mf-cockpit-capua)
+2. Change the name with the new repository ( mf-cockpit-ds-ui-react => name of new repository ) in the following files: - package-lock.json - tsconfig.json - webpack.config.js
+   Also change the filename itself bluedot-mf-cockpit-ds-ui-react.tsx => bluedot-name of the repostiroy.tsx ( for example mf-cockpit-capua)
 3. Change the local port in the document server => index.ts to suit your needs for local development
 4. Run "npm install" command to install the libraries. If you need token from aws code artifacts do the following:
    - get the token from aws code artifacts
@@ -31,4 +31,4 @@ To be able to use this functionality, follow theese steps:
 4. add key-value pair devtools:true
 5. click refresh on the page and in the bottom right corrner an incon with symbol {...} will appear
 6. click on it will expand the import maps
-7. find the mfe that you want to overried with your service that is started locally. Here is an example of the url: http://localhost:4210/bluedot-mf-template-react.js. Please note that the port number should be the one that you have chosen for local development
+7. find the mfe that you want to overried with your service that is started locally. Here is an example of the url: http://localhost:4210/bluedot-mf-cockpit-ds-ui-react.js. Please note that the port number should be the one that you have chosen for local development

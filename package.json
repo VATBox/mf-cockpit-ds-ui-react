@@ -1,5 +1,5 @@
 {
-  "name": "mf-template-react",
+  "name": "mf-cockpit-ds-ui-react",
   "version": "1.0.0",
   "scripts": {
     "start": "ts-node --transpile-only --files ./server/index.ts",
@@ -74,5 +74,5 @@
     "single-spa-react": "^6.0.2",
     "ts-node": "^10.9.0"
   },
-  "types": "dist/bluedot-mf-template-react.d.ts"
+  "types": "dist/bluedot-mf-cockpit-ds-ui-react.d.ts"
 }
