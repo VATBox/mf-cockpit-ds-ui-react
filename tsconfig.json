@@ -1,0 +1,13 @@
+{
+  "extends": "ts-config-single-spa",
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "esModuleInterop": true,
+    "declarationDir": "dist",
+    "target": "esnext",
+    "module": "commonjs"
+  },
+  "files": ["src/bluedot-mf-template-react.tsx"],
+  "include": ["src", "server"],
+  "exclude": ["build", "jest", "node_modules", "scripts", "webpack", "types", "dist"]
+}

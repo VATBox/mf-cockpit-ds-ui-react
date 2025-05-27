@@ -1,0 +1,3 @@
+registry=https://vatbox-395499912268.d.codeartifact.eu-west-1.amazonaws.com/npm/bluedot-npm/
+//vatbox-395499912268.d.codeartifact.eu-west-1.amazonaws.com/npm/bluedot-npm/:always-auth=true
+//vatbox-395499912268.d.codeartifact.eu-west-1.amazonaws.com/npm/bluedot-npm/:_authToken=${CODEARTIFACT_AUTH_TOKEN}
